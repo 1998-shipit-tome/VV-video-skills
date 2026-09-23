@@ -1,0 +1,28 @@
+GÓI DiLiM — SKILLS + KHO B-ROLL + KHO SFX
+==========================================
+
+Nên giải nén bằng 7-Zip hoặc WinRAR (file lớn, tên tiếng Việt). Giải nén ra một thư mục tạm rồi chép từng phần:
+
+1. footage\          -> D:\HYPERFRAME\footage\
+   (broll 1.880 file ~47 GB, sfx 1.276 file, index + sfx-index đã build, config.json, sfx-config.json)
+
+2. sfx-library\Sound Effect\  -> D:\DiLi Media\Data\Library\Music\Sound Effect\
+   (thư viện 9.286 tiếng, add-sfx index tại chỗ dưới root tên "library")
+
+3. skills-project\*  -> D:\HYPERFRAME\.claude\skills\
+   add-footage, add-sfx, add-broll-tieu-hoa (gói tiêu hóa tự chứa, có footage riêng)
+
+4. skills-user\*     -> %USERPROFILE%\.claude\skills\
+   broll-top, broll-vip, vertical-topband-video
+
+5. skills-base\*     -> D:\HYPERFRAME\.agents\skills\  (bộ HyperFrames gốc; skills-lock.json đặt ở D:\HYPERFRAME\)
+   Có thể cài lại bản mới qua skills-lock.json thay vì chép.
+
+NẾU ĐƯỜNG DẪN KHÁC D:\HYPERFRAME
+- Sửa footage\config.json: "broll_root", "index_dir".
+- Sửa footage\sfx-config.json: "path" của từng root (đặc biệt root "library") và "index_dir".
+- Script tìm config ở D:\HYPERFRAME\footage\*.json hoặc qua biến môi trường
+  ADD_FOOTAGE_CONFIG / ADD_SFX_CONFIG trỏ tới file config.
+- Sau khi sửa, chạy build_index.py update (add-footage) để index khớp đường dẫn mới.
+
+Máy nhận cần: Python 3.11+, ffmpeg/ffprobe trong PATH.

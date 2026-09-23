@@ -1,0 +1,119 @@
+{
+  "_comment": "Preset DiLiM Supplement — do tu video mau 'Te bao nao ton thuong...' (1080x1920@60, DaVinci Resolve). Doi cac gia tri o day de dung cho brand khac; khong sua build.py.",
+
+  "canvas": { "width": 1080, "height": 1920, "fps": 60 },
+
+  "layout": {
+    "band_height_ratio": 0.38,
+    "aroll_translate_ratio": 0.125,
+    "_comment_band": "Do tu video mau: dai B-roll chiem 34-41% chieu cao, pho bien nhat ~38%. Canh duoi cat thang, KHONG bo goc/vien/do bong.",
+    "_comment_translate": "A-roll giu scale 1.00, chi dich xuong 12.5% chieu cao khung (~240px) khi dai bat. Dich la step tuc thi, khong ease."
+  },
+
+  "logo": {
+    "src": null,
+    "x_ratio": 0.05,
+    "y_ratio": 0.030,
+    "width_ratio": 0.24,
+    "_comment": "Badge goc tren trai, x 5-29%, y 3-8%. Luon nam TREN cung ke ca frame flash. Dat src = duong dan file PNG co alpha, hoac null de bo qua."
+  },
+
+  "font": {
+    "family": "Anton",
+    "file": "C:/Users/Admin/AppData/Local/Microsoft/Windows/Fonts/Anton-Regular.ttf",
+    "_comment": "Anton da kiem chung du 52/52 dau tieng Viet kho (E-mu-sac, O-moc-nga...). CANH BAO: Bebas Neue va Impact THIEU dau tieng Viet - chu se hien o vuong. Font thay the an toan: Be Vietnam Pro Black, Montserrat Black, iCiel Koni Black."
+  },
+
+  "colors": {
+    "white":   "#FFFFFF",
+    "yellow":  "#FFD400",
+    "gold":    "#FFC400",
+    "orange":  "#FF7A00",
+    "red":     "#A81010",
+    "green":   "#22B14C",
+    "navy":    "#101A33",
+    "magenta": "#FF3FA4",
+    "black":   "#000000",
+    "_comment": "white/yellow/red/navy/magenta do truc tiep tu frame. green va orange la uoc luong tu mo ta dinh tinh - chinh lai neu co logo brand chuan."
+  },
+
+  "caption": {
+    "baseline_ratio": 0.385,
+    "size_ratio": 0.058,
+    "line_spacing": 1.14,
+    "max_width_ratio": 0.86,
+    "_comment_baseline": "Day khoi chu neo o ~38.5% chieu cao khung, tuc DE LEN duong seam giua B-roll va A-roll. Day la dac diem nhan dang cua format - dung bao gio ha xuong lower third.",
+    "_comment_size": "5.8% chieu cao khung ~ 111px, cho cap-height ~4.5% nhu do duoc tren video mau."
+  },
+
+  "styles": {
+    "hook": {
+      "fill": "gold", "outline": "black", "outline_w": 8, "shadow": 4,
+      "box": null, "anim": "pop",
+      "_use": "2-3 dong mo dau, cau moc cau chuyen. Video mau dung fill gradient vang->cam; ASS khong lam duoc gradient nen dung vang dam solid. Muon dung gradient that phai render PNG rieng roi overlay."
+    },
+    "quote": {
+      "fill": "white", "outline": null, "outline_w": 0, "shadow": 0,
+      "box": "navy", "box_pad": [46, 30], "anim": "wipe",
+      "quote_marks": "magenta", "attribution_color": "magenta",
+      "_use": "Card trich dan / cau title cua video. Dung DUNG MOT LAN. Co dau ngoac kep magenta goc tren-trai va duoi-phai + dong attribution nho."
+    },
+    "plate_red": {
+      "fill": "white", "outline": null, "outline_w": 0, "shadow": 0,
+      "box": "red", "box_border": "white", "box_border_w": 3, "box_pad": [38, 22], "anim": "wipe",
+      "_use": "Caption chay doan VAN DE: trieu chung, canh bao, rui ro, hau qua. Hop tu co gian om chu."
+    },
+    "edu": {
+      "fill": "white", "outline": "black", "outline_w": 7, "shadow": 5,
+      "box": null, "anim": "typewriter", "line_colors": ["white", "yellow"],
+      "_use": "Doan GIAI THICH / giai phap. Dong 1 trang = cau khang dinh, dong 2 vang = loi ich. Mau theo DONG, khong bao gio theo tung tu."
+    },
+    "keyword": {
+      "fill": "orange", "outline": "white", "outline_w": 10, "shadow": 6,
+      "box": null, "anim": "pop", "size_mult": 1.22,
+      "_use": "MOT tu khoa duy nhat can nho (ten hoat chat, trieu chung chinh). Giu lau 5-6s lam neo chu de, khong doi theo nhip 2s."
+    },
+    "cta": {
+      "fill": "white", "outline": null, "outline_w": 0, "shadow": 0,
+      "box": "green", "box_pad": [40, 24], "anim": "wipe",
+      "box_alt": "red",
+      "_use": "Keu goi hanh dong cuoi video. Hop dac mau brand, cac dong xen ke xanh la / do, wipe hop truoc chu sau."
+    }
+  },
+
+  "transitions": {
+    "band_in": "dissolve",
+    "band_out": "cut",
+    "dissolve_dur": 0.45,
+    "slide_dur": 0.35,
+    "_comment": "Video mau dung 4 kieu: hard cut (nhieu nhat), slide ngang trai->phai 0.30-0.40s khi doi clip trong dai, slide len khi dai thoat, cross-dissolve 0.45s ease-out khi dai vao."
+  },
+
+  "kenburns": {
+    "default": 1.13,
+    "_comment": "Push-in tuyen tinh neo giua, 1.00 -> 1.13 (~+6%/giay). Reset ve 1.00 moi clip moi. Co the day toi 1.5 cho clip an du can nhan manh."
+  },
+
+  "endcard": {
+    "enabled": true,
+    "duration": 4.0,
+    "flash_frames": 1,
+    "gradient": ["#2B1B5A", "#123A7A"],
+    "border_color": "#7B5CFF",
+    "border_w": 5,
+    "border_inset_ratio": 0.045,
+    "text_color": "white",
+    "size_ratio": 0.052,
+    "anim": "scale_up",
+    "_comment": "Hard cut + 1 frame flash trang vao end card. Nen gradient dong, vien bo goc tim. Giu tinh ~3s, KHONG fade to black."
+  },
+
+  "rhythm": {
+    "beat_min": 1.6,
+    "beat_max": 6.0,
+    "breather_every": 15.0,
+    "breather_min": 1.5,
+    "broll_density_target": [0.70, 0.90],
+    "_comment": "Nguong dung cho lint_plan.py. Video mau: B-roll phu ~83% thoi luong, breather A-roll sach moi 12-15s, 1 breather dai 5s dat dung cho chuyen doan van de -> giai phap."
+  }
+}

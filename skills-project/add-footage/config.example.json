@@ -1,0 +1,12 @@
+{
+  "_huong_dan": "Copy file này thành D:\\HYPERFRAME\\footage\\config.json (hoặc đặt biến môi trường ADD_FOOTAGE_CONFIG trỏ tới nó). Máy khác chỉ cần sửa broll_root.",
+  "broll_root": "D:\\HYPERFRAME\\footage\\broll",
+  "index_dir": "D:\\HYPERFRAME\\footage\\index",
+  "sheet_frames": 12,
+  "sheet_cols": 4,
+  "sheet_width": 320,
+  "thumb_width": 480,
+  "skip_dirs": ["Music"],
+  "video_ext": [".mp4", ".mov", ".webm", ".mkv", ".m4v"],
+  "image_ext": [".jpg", ".jpeg", ".png", ".webp", ".jfif"]
+}

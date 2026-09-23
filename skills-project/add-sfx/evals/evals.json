@@ -1,0 +1,23 @@
+{
+  "skill_name": "add-sfx",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Video Raydel V10 đã có plan B-roll + caption ở D:\\HYPERFRAME\\videos\\raydel-v10\\plan.json (30 caption, 12 B-roll, bố cục dải trên). Thêm sound effect cho video này: tiếng khi caption hiện, whoosh khi B-roll vào, riser trước lúc lộ giá ở giây 41, và ka-ching ở giây 44. Ghi sfx-plan.json, chưa chèn.",
+      "expected_output": "sfx-plan.json với hit lấy đúng thời điểm sự kiện từ plan.json (không phải mốc segment), pop cùng 1 biến thể cho caption thường, whoosh ngắn (<0.6s) cho B-roll, riser 1.5–4s kết đúng 41s, cash ~44s; volume 0.10–0.25; hook/CTA có 2–3 ứng viên; không dùng file >3s ngoài riser; mật độ ~1 tiếng/3–5s.",
+      "files": ["D:\\HYPERFRAME\\videos\\raydel-v10\\plan.json"]
+    },
+    {
+      "id": 2,
+      "prompt": "Tôi vừa tải thêm một bộ SFX vào D:\\SFX-moi (200 file wav tên kiểu SFX_001.wav). Đưa nó vào kho để tìm được, và cho tôi biết trong đó có bao nhiêu tiếng whoosh với ding.",
+      "expected_output": "Thêm root mới vào sfx-config.json, chạy build_sfx_index.py update (chỉ file mới được probe), stats; giải thích rằng tên vô nghĩa nên category phần lớn là misc và đề xuất gắn nhãn bằng tag sau khi người dùng nghe; không tự bịa số whoosh/ding nếu tên không nói lên điều đó.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Composition D:\\HYPERFRAME\\videos\\rich-q10-v4\\index.html đã có B-roll và caption. Chèn SFX theo sfx-plan.json cùng thư mục rồi lint. Tiếng caption nghe bị chậm hơn chữ một chút ở bản trước, sửa luôn.",
+      "expected_output": "place_sfx.py convert WAV 48k peak -6 dBFS vào assets/sfx/, snippet <audio data-start=hit-lead_s data-duration data-track-index=20 data-volume>, chèn ở cấp con của #root sau khối audio dialogue, hyperframes lint pass; giải thích lệch do khoảng lặng đầu file và data-start đã trừ lead_s.",
+      "files": ["D:\\HYPERFRAME\\videos\\rich-q10-v4\\index.html", "D:\\HYPERFRAME\\videos\\rich-q10-v4\\sfx-plan.json"]
+    }
+  ]
+}

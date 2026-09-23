@@ -1,0 +1,17 @@
+{
+  "_huong_dan": "Copy thành D:\\HYPERFRAME\\footage\\sfx-config.json (hoặc đặt ADD_SFX_CONFIG). Mỗi root: name (tiền tố rel_path) + path. Máy khác chỉ sửa path.",
+  "sfx_roots": [
+    {"name": "sound-effect",    "path": "D:\\HYPERFRAME\\footage\\sfx\\sound-effect",    "priority": 1, "note": "phân theo cảm xúc tiếng Việt"},
+    {"name": "sfx-pack",        "path": "D:\\HYPERFRAME\\footage\\sfx\\sfx-pack",        "priority": 2, "note": "whoosh/riser/UI chuẩn + Cinema SFX Pack"},
+    {"name": "nitrozme",        "path": "D:\\HYPERFRAME\\footage\\sfx\\nitrozme",        "priority": 3, "note": "click/transition"},
+    {"name": "sound-vlog",      "path": "D:\\HYPERFRAME\\footage\\sfx\\sound-vlog",      "priority": 3},
+    {"name": "am-thanh",        "path": "D:\\HYPERFRAME\\footage\\sfx\\am-thanh",        "priority": 3},
+    {"name": "music-broll",     "path": "D:\\HYPERFRAME\\footage\\sfx\\music-broll",     "priority": 3, "note": "20 file pipeline cũ hay dùng"},
+    {"name": "hyperframe-base", "path": "D:\\HYPERFRAME\\footage\\sfx\\hyperframe-base", "priority": 1, "note": "9 file đã dùng trong trao-nguoc-recut"},
+    {"name": "library",         "path": "D:\\DiLi Media\\Data\\Library\\Music\\Sound Effect", "priority": 5, "note": "9.286 file / 21 GB — index tại chỗ, không copy"}
+  ],
+  "index_dir": "D:\\HYPERFRAME\\footage\\sfx-index",
+  "audio_ext": [".wav", ".mp3", ".aac", ".m4a", ".ogg", ".flac", ".aif", ".aiff", ".wma"],
+  "video_ext": [".mp4", ".mov", ".webm", ".mkv"],
+  "analyze_max_sec": 30
+}

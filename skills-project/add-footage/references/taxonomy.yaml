@@ -1,0 +1,126 @@
+# Từ điển phân loại kho footage DiLiM. Agent dùng id ở đây cho --topic/--kind/--product.
+# Sửa file này khi thêm thư mục/sản phẩm mới; build_index.py đọc lại mỗi lần chạy.
+
+topics:
+  xuong_khop:          {vi: "Xương khớp - đau khớp, thoái hóa, sụn"}
+  mach_mau_than_kinh:  {vi: "Mạch máu - thần kinh - tế bào, xơ vữa, hồng cầu, synapse"}
+  dot_quy:             {vi: "Đột quỵ, tai biến, cấp cứu"}
+  dau_dau_chong_mat:   {vi: "Đau đầu - chóng mặt - mệt mỏi - ốm"}
+  ngu:                 {vi: "Giấc ngủ: mất ngủ, trằn trọc, ngủ ngon"}
+  giam_can:            {vi: "Giảm cân, béo, mỡ bụng, ăn kiêng"}
+  noi_tang:            {vi: "Nội tạng: gan, thận, ruột (đồ họa)"}
+  tieu_hoa:            {vi: "Đau bụng, tiêu hóa, trào ngược, đầy hơi"}
+  ho_kho_tho:          {vi: "Ho, khó thở, phổi"}
+  kham_benh:           {vi: "Khám bệnh, bác sĩ, uống thuốc, bệnh viện"}
+  an_uong_lanh_manh:   {vi: "Ăn uống lành mạnh, rau củ, nước (tích cực)"}
+  do_an:               {vi: "Đồ ăn nói chung, nấu, ăn, dầu mỡ, đồ chiên"}
+  bia_ruou:            {vi: "Bia rượu, nhậu, say"}
+  the_thao:            {vi: "Thể dục thể thao, chạy bộ, tập gym, người lớn tuổi vận động"}
+  thien_doc_sach:      {vi: "Thiền, yoga, đọc sách, thư giãn"}
+  van_phong:           {vi: "Nhân viên văn phòng, stress, làm việc, mệt mỏi công việc"}
+  dien_thoai_mxh:      {vi: "Nghiện điện thoại, mạng xã hội, cúi đầu xem màn hình"}
+  gia_dinh:            {vi: "Gia đình: vui vẻ, cãi vã, con cái, cha mẹ"}
+  vo_chong:            {vi: "Vợ chồng, phòng ngủ, sinh lý, tình cảm"}
+  toc_da_lam_dep:      {vi: "Tóc, da, làm đẹp, lão hóa"}
+  ai_cong_nghe:        {vi: "AI, công nghệ, dữ liệu, màn hình"}
+  san_pham:            {vi: "Sản phẩm DiLiM thật (hộp, viên, nguyên liệu)"}
+  dilim_quay:          {vi: "Footage DiLiM tự quay: bác sĩ, người thật cầm sản phẩm"}
+  thuong_hieu:         {vi: "Ảnh thương hiệu, công bố, nhà máy"}
+  cta:                 {vi: "Đoạn kết / kêu gọi để lại tên SĐT"}
+  an_du:               {vi: "Ẩn dụ vật thể: rỉ sét, động cơ, ống tắc, sàng gạo..."}
+
+# Thư mục gốc trong broll_root -> topic + pool (thứ tự ưu tiên tìm)
+# pool: chuan_hoa(0) > topic(1) = product(1, chỉ khi nhắc sản phẩm) > dilim_quay(2) > cta(3) > lon_xon(5)
+folders:
+  "Đã Chuẩn Hóa":                               {pool: chuan_hoa, topics: []}
+  "Product Broll":                              {pool: product, topics: [san_pham]}
+  "Footage Dilim Quay":                         {pool: dilim_quay, topics: [dilim_quay, kham_benh]}
+  "Dilim":                                      {pool: dilim_quay, topics: [thuong_hieu]}
+  "CTA":                                        {pool: cta, topics: [cta]}
+  "Lộn Xộn Xà bần":                             {pool: lon_xon, topics: []}
+  "Xương khớp - Đau":                           {pool: topic, topics: [xuong_khop]}
+  "Mạch Máu - Thần Kinh - TẾ BÀO":              {pool: topic, topics: [mach_mau_than_kinh]}
+  "Đột quỵ":                                    {pool: topic, topics: [dot_quy, mach_mau_than_kinh]}
+  "Đau đầu - Chóng mặt - Mệt mõi - Bệnh":       {pool: topic, topics: [dau_dau_chong_mat]}
+  "Ngủ- Ngon- mất ngủ":                         {pool: topic, topics: [ngu]}
+  "Giảm cân - Mập, tăng cân":                   {pool: topic, topics: [giam_can]}
+  "NỘI TẠNG":                                   {pool: topic, topics: [noi_tang]}
+  "Đau Bụng - Tiêu hóa":                        {pool: topic, topics: [tieu_hoa]}
+  "Ho - Khó Thở":                               {pool: topic, topics: [ho_kho_tho]}
+  "Khám bệnh - Bác Sĩ - uống Thuốc- bệnh khác": {pool: topic, topics: [kham_benh]}
+  "Ăn uống lành mạnh":                          {pool: topic, topics: [an_uong_lanh_manh]}
+  "Đồ ăn - Ăn uống":                            {pool: topic, topics: [do_an]}
+  "Bia Rượu - Nhậu":                            {pool: topic, topics: [bia_ruou]}
+  "Thể dục thể thao":                           {pool: topic, topics: [the_thao]}
+  "Thiền - Đọc sách":                           {pool: topic, topics: [thien_doc_sach]}
+  "Nhân Viên văn phòng":                        {pool: topic, topics: [van_phong]}
+  "Nghiện Điện Thoại MXH":                      {pool: topic, topics: [dien_thoai_mxh]}
+  "Gia đình - Vui vẻ- Cãi vã":                  {pool: topic, topics: [gia_dinh]}
+  "Hàu- Vợ chồng":                              {pool: topic, topics: [vo_chong]}
+  "TÓC- DA- LÀM ĐẸP":                           {pool: topic, topics: [toc_da_lam_dep]}
+  "AI":                                         {pool: topic, topics: [ai_cong_nghe]}
+
+# Thư mục con trong Product Broll -> product_id
+product_folders:
+  "Nano Sụn cá mập Nhật Bản":                                        nano_sun
+  "GLUCHONGEL":                                                      gluchongel
+  "Rich Coenzyme Q10":                                               rich_q10
+  "Raydel Policosanol":                                              raydel
+  "Ellagic Acid - Giảm mỡ nội tạng":                                 ellagic
+  "Chất xơ hoà tan inulin phân tử dài  công nghệ Fuji FF":           inulin_fuji
+  "Nghệ Mùa Thu Okinawa Nhật Bản":                                   nghe_okinawa
+  "Natto Xám":                                                       natto
+  "Hàu Nano Gold":                                                   hau_nano_gold
+  "DHA + EPA + SQ":                                                  dha_epa_sq
+  "BH COLLAGEN":                                                     bh_collagen
+  "BỘ CHĂM SÓC TÓC":                                                 cham_soc_toc
+  "Ex Fucoidan":                                                     ex_fucoidan
+  "Fucoidan kenggen":                                                fucoidan_kenggen
+  "Gan":                                                             gan
+  "Growth Habit (Tăng Chiều Cao)":                                   growth_habit
+  "INSUNA FUJINA":                                                   insuna_fujina
+  "NMN 27000":                                                       nmn_27000
+  "Ảnh Combo Sản Phẩm":                                              combo
+
+# Loại hình chủ thể (subject_type) — quyết định "người thật hay đồ họa"
+subject_types:
+  real_person:     "người thật quay thật (kể cả AI-gen chân thực)"
+  anatomy_3d:      "đồ họa 3D/animation giải phẫu: khớp, mạch máu, tế bào, não, nội tạng"
+  product:         "hộp/viên/nhãn sản phẩm, nguyên liệu, nhà máy, chứng nhận"
+  metaphor_object: "vật thể ẩn dụ: máy rỉ sét, ống tắc, sàng gạo, dầu nhớt, đồng hồ cát"
+  lifestyle_scene: "cảnh sinh hoạt không nhân vật rõ: bữa ăn bày sẵn, đường phố, thiên nhiên"
+  text_graphic:    "chữ/biểu đồ/infographic đã burn sẵn"
+  screen_ui:       "màn hình điện thoại/máy tính, giao diện app"
+
+moods: [positive, negative, neutral, painful, tense]
+
+# Từ đồng nghĩa cho search (khóa -> các cụm cùng nghĩa). Không dấu hay có dấu đều được.
+synonyms:
+  "mất ngủ":        ["trằn trọc", "khó ngủ", "thức giấc", "nằm mở mắt ban đêm", "nhìn trần nhà"]
+  "ngủ ngon":       ["ngủ sâu", "ngủ say", "nằm ngủ thoải mái"]
+  "đau đầu":        ["ôm đầu", "day thái dương", "nhăn mặt tay lên đầu", "nhức đầu"]
+  "chóng mặt":      ["choáng váng", "loạng choạng", "vịn tường", "hoa mắt"]
+  "mệt mỏi":        ["uể oải", "ngáp", "gục xuống bàn", "kiệt sức", "thở dài"]
+  "xơ vữa":         ["mảng bám thành mạch", "mỡ bám lòng mạch", "tắc mạch", "hẹp lòng mạch"]
+  "mỡ máu":         ["cholesterol", "ldl", "mỡ trong máu", "xét nghiệm máu"]
+  "đột quỵ":        ["tai biến", "ngã quỵ", "cấp cứu", "băng ca", "xe lăn"]
+  "đau khớp":       ["xoa đầu gối", "ôm gối", "chống gậy", "leo cầu thang khó", "cứng khớp"]
+  "sụn":            ["sụn khớp", "mô hình khớp", "khớp gối 3d"]
+  "tê bì":          ["tê tay", "tê chân", "bóp tay", "xoa bàn tay"]
+  "hay quên":       ["đãng trí", "quên", "trí nhớ kém", "lẫn", "tìm đồ"]
+  "béo":            ["mỡ bụng", "véo mỡ", "đo vòng eo", "cân nặng", "quần chật"]
+  "nhậu":           ["uống bia", "rượu", "cụng ly", "say"]
+  "gan":            ["xơ gan", "gan nhiễm mỡ", "lá gan"]
+  "trào ngược":     ["ợ nóng", "ôm ngực", "nóng rát ngực"]
+  "đau bụng":       ["ôm bụng", "đầy hơi", "khó tiêu", "ngồi bồn cầu"]
+  "văn phòng":      ["laptop", "bàn làm việc", "họp", "công sở", "máy tính"]
+  "điện thoại":     ["smartphone", "lướt", "cúi đầu xem màn hình", "mạng xã hội"]
+  "tập thể dục":    ["chạy bộ", "gym", "yoga", "đạp xe", "vươn vai", "đi bộ"]
+  "ăn lành mạnh":   ["salad", "rau", "trái cây", "uống nước", "healthy"]
+  "đồ chiên":       ["chiên ngập dầu", "fast food", "burger", "gà rán", "dầu mỡ"]
+  "vợ chồng":       ["phòng ngủ", "cãi nhau", "ôm nhau", "nắm tay", "quay lưng"]
+  "bác sĩ":         ["khám", "ống nghe", "bệnh viện", "đo huyết áp", "phòng khám"]
+  "uống thuốc":     ["viên thuốc", "vỉ thuốc", "nhiều loại thuốc", "hộp thuốc"]
+  "tế bào":         ["hồng cầu", "dòng máu", "ti thể", "năng lượng tế bào", "synapse"]
+  "não":            ["neuron", "dây thần kinh", "vỏ não", "não bộ 3d"]
+  "rỉ sét":         ["máy cũ", "gỉ", "bánh răng", "động cơ"]

@@ -1,0 +1,80 @@
+{
+  "_doc": "Moi con so cua ca hai bo cuc nam o day. Doi bo cuc thi sua file NAY, khong sua code. Doi chieu voi references/technical.md muc 6h.",
+
+  "canvas": { "w": 1080, "h": 1920, "fps": 60 },
+
+  "layouts": {
+    "top": {
+      "_ten": "Broll Top — dai ghim sat mep tren, tran het be ngang",
+      "card": { "w": 1080, "h": 608, "x": 0, "y": 0 },
+      "_vi_sao_608": "608 = dung 16:9 o be ngang 1080. Ket hop voi luat lap kin be ngang, nguon 16:9 vua khit ma khong mat pixel be ngang nao.",
+      "radius": 0,
+      "border": 0,
+      "anim": "cut",
+      "caption": { "anchor": "center", "y": 618 },
+      "_caption_doc": "Neo theo TAM khoi 2 dong chuan, chu moc XUONG DUOI dai."
+    },
+
+    "vip": {
+      "_ten": "Broll Vip — the noi nua duoi khung, bo goc + vien trang",
+      "card": { "w": 918, "h": 516, "x": 81, "y": 1056 },
+      "_vi_sao": "85% be ngang, dung 16:9, mep tren o 55% chieu cao. SO DO CON LA UOC LUONG tu anh chup man hinh nguoi dung — hoi lai truoc khi dung cho video quan trong.",
+      "radius": 40,
+      "border": 11,
+      "border_color": [255, 255, 255],
+      "anim": "push",
+      "push_frames": 12,
+      "push_gap": 36,
+      "_anim_doc": "MOT kieu duy nhat: push sang trai, dung cho CA luc the xuat hien lan dau.",
+      "caption": { "anchor": "bottom", "y": 1036 },
+      "_caption_doc": "Neo theo MEP DUOI, chu moc LEN TREN — khong bao gio de len the."
+    }
+  },
+
+  "caption_style": {
+    "font": "Anton-Regular.ttf",
+    "size_1line": 68,
+    "size_2line": 58,
+    "size_min": 34,
+    "margin": 40,
+    "pad_x": 28,
+    "pad_y": 14,
+    "line_gap": 8,
+    "radius": 14,
+    "slide_px": 90,
+    "slide_frames": 10,
+    "_khi_bien_mat": "CAT THANG, khong fade. Chi co animation luc hien.",
+    "colors": {
+      "red": "#D62828", "white": "#FFFFFF", "green": "#157A3F",
+      "yellow": "#FFEA00", "gold": "#B8860B", "black": "#000000",
+      "navy": "#101A33", "amber": "#FFD400"
+    },
+    "scheme": {
+      "warning":   [["red", "white", "yellow"], ["white", "red", "black"]],
+      "positive":  [["white", "green", "gold"], ["green", "white", "yellow"]],
+      "product":   [["white", "green", "gold"], ["white", "green", "gold"]],
+      "cta":       [["white", "green", "red"], ["green", "white", "yellow"]],
+      "highlight": [["amber", "navy", "red"], ["navy", "amber", "white"]]
+    },
+    "_scheme_doc": "Moi variant: [[nen, chu, keyword] dong 1, [...] dong 2]. Nhom product TUYET DOI khong dung do/den."
+  },
+
+  "broll": {
+    "scale": "fill_width",
+    "_scale_doc": "Phong vua BE NGANG roi cat bot tren/duoi. KHONG BAO GIO pad den. 'Khong xen' nghia la khong cat be NGANG.",
+    "zoom_over_time": false,
+    "_zoom_doc": "Ti le phong la TINH. Cam Ken Burns / push-in.",
+    "merge_same_clip": true,
+    "_merge_doc": "Nhip lien nhau dung cung file -> MOT doan lien tuc, khong tua lai.",
+    "close_gap_between_adjacent": true,
+    "_gap_doc": "Hai B-roll lien nhau -> LUON khep kin, khong nguong. Nhung KHONG bac cau qua nhip CO Y bo trong."
+  },
+
+  "encode": {
+    "intermediate": ["-c:v", "libx264", "-preset", "veryfast", "-crf", "16", "-bf", "0", "-pix_fmt", "yuv420p"],
+    "_bf0_doc": "-bf 0 bat buoc: B-frame sinh CTS offset, noi nhieu doan bang concat thi ffmpeg BO frame o moi noi.",
+    "final_mp4": ["-c:v", "libx264", "-preset", "faster", "-crf", "20"],
+    "prores": ["-c:v", "prores_ks", "-profile:v", "4", "-vendor", "ap4h", "-pix_fmt", "yuva444p10le"],
+    "_nvenc_doc": "NVENC khong dung duoc tren may nay: ffmpeg doi API 13.1, driver co 13.0."
+  }
+}

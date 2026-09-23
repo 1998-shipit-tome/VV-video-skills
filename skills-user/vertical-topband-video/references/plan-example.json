@@ -1,0 +1,75 @@
+{
+  "_comment": "Plan mau day du. Copy file nay ra canh A-roll roi sua. Duong dan tinh tuong doi theo vi tri file plan.",
+
+  "aroll": "aroll.mp4",
+  "output": "final.mp4",
+  "preset": "dilim",
+
+  "brand": {
+    "logo": { "src": "assets/logo.png" }
+  },
+
+  "beats": [
+    {
+      "_": "HOOK - chu vang vien den, khong nen. Chi dung o dau video.",
+      "start": 0.0, "end": 2.6,
+      "broll": { "src": "footage/that-nghiep.mp4", "in": 3.5, "kenburns": 1.13 },
+      "caption": { "style": "hook", "lines": ["MẤT VIỆC RỒI TÌM LẠI"], "anim": "pop" }
+    },
+    {
+      "_": "TITLE CARD - dung DUNG MOT LAN trong ca video.",
+      "start": 2.6, "end": 6.6,
+      "broll": { "src": "footage/nao-3d.mp4", "in": 0, "kenburns": 1.2, "in_transition": "dissolve" },
+      "caption": {
+        "style": "quote",
+        "lines": ["TẾ BÀO NÃO ĐÃ BỊ TỔN THƯƠNG", "THÌ KHÔNG PHỤC HỒI ĐƯỢC"],
+        "attribution": "DILIM SUPPLEMENT"
+      }
+    },
+    {
+      "_": "Doan VAN DE - plate do. Montage trieu chung ~2s moi clip.",
+      "start": 6.6, "end": 8.8,
+      "broll": { "src": "footage/dau-dau.mp4", "in": 1.0, "in_transition": "slide_left" },
+      "caption": { "style": "plate_red", "lines": ["ĐAU ĐẦU, VAI GÁY"] }
+    },
+    {
+      "_": "Tu khoa don, giu lau hon nhip binh thuong lam neo chu de.",
+      "start": 8.8, "end": 11.0,
+      "broll": { "src": "footage/hay-quen.mp4", "in": 0.5 },
+      "caption": { "style": "keyword", "lines": ["HAY QUÊN"], "anim": "pop" }
+    },
+
+    {
+      "_": "BREATHER = khoang trong 11.0 -> 15.5. Khong khai bao gi ca. Day la cho chuyen doan van de -> giai phap.",
+      "start": 15.5, "end": 19.5,
+      "broll": { "src": "footage/mach-mau-3d.mp4", "in": 2.0, "kenburns": 1.13, "in_transition": "dissolve" },
+      "caption": {
+        "style": "edu",
+        "lines": ["MẠCH MÁU BỀN, SẠCH", "ĐỂ MÁU LƯU THÔNG LÊN NÃO TỐT"],
+        "anim": "typewriter"
+      }
+    },
+    {
+      "_": "Doan an du: co tinh BO HAN caption, de hinh tu noi.",
+      "start": 19.5, "end": 23.0,
+      "broll": { "src": "footage/thep-ri.mp4", "in": 0, "kenburns": 1.35 }
+    },
+    {
+      "_": "Cung mot clip keo qua 2 beat -> tach ra, doi 'in' va 'kenburns' de no khong dung yen.",
+      "start": 23.0, "end": 26.0,
+      "broll": { "src": "footage/thep-ri.mp4", "in": 3.5, "kenburns": 1.13 },
+      "caption": { "style": "edu", "lines": ["CHỐNG OXY HÓA", "BẢO VỆ MÔ THẦN KINH"] }
+    },
+    {
+      "_": "CTA - lap 2 lan, doi mau hop giua cac dong.",
+      "start": 26.0, "end": 29.5,
+      "broll": { "src": "footage/packshot.mp4", "in": 0, "out_transition": "slide_up" },
+      "caption": { "style": "cta", "lines": ["ĐỂ LẠI TÊN HOẶC SĐT"], "box_color": "red" }
+    }
+  ],
+
+  "endcard": {
+    "lines": ["SẢN PHẨM NÀY", "KHÔNG PHẢI LÀ THUỐC", "VÀ KHÔNG CÓ TÁC DỤNG", "THAY THẾ THUỐC CHỮA BỆNH"],
+    "duration": 4.0
+  }
+}

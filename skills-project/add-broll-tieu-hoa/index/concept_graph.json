@@ -1,0 +1,356 @@
+{
+ "version": 1,
+ "edges": [
+  {
+   "concept": "táo bón",
+   "tokens": [
+    "bon",
+    "tao"
+   ],
+   "id": "e26dc9db3c48",
+   "media_start": 0.0,
+   "weight": 1,
+   "note": "ngồi bồn cầu rặn khó — mặc định DiLiM",
+   "source": "dilim-seed",
+   "ts": 1789197813
+  },
+  {
+   "concept": "ngồi bồn cầu lâu",
+   "tokens": [
+    "bon",
+    "cau",
+    "lau",
+    "ngoi"
+   ],
+   "id": "cb06c3b82323",
+   "media_start": 0.0,
+   "weight": 1,
+   "note": "bấm điện thoại trên bồn cầu",
+   "source": "dilim-seed",
+   "ts": 1789197813
+  },
+  {
+   "concept": "đau bụng",
+   "tokens": [
+    "bung",
+    "dau"
+   ],
+   "id": "b5d4453099ac",
+   "media_start": 0.0,
+   "weight": 1,
+   "note": "bà cụ ôm bụng trên sofa",
+   "source": "dilim-seed",
+   "ts": 1789197813
+  },
+  {
+   "concept": "đau bụng sau ăn",
+   "tokens": [
+    "an",
+    "bung",
+    "dau",
+    "sau"
+   ],
+   "id": "2594a2436af4",
+   "media_start": 0.0,
+   "weight": 1,
+   "note": "đang ăn cơm thì ôm bụng",
+   "source": "dilim-seed",
+   "ts": 1789197813
+  },
+  {
+   "concept": "đầy hơi khó tiêu",
+   "tokens": [
+    "day",
+    "hoi",
+    "kho",
+    "tieu"
+   ],
+   "id": "4fc03d068177",
+   "media_start": 0.0,
+   "weight": 1,
+   "note": "xoa bụng sau khi ăn burger",
+   "source": "dilim-seed",
+   "ts": 1789197813
+  },
+  {
+   "concept": "trào ngược dạ dày",
+   "tokens": [
+    "da",
+    "day",
+    "nguoc",
+    "trao"
+   ],
+   "id": "0307908533d7",
+   "media_start": 26.0,
+   "weight": 1,
+   "note": "dịch axit trào lên thực quản (đoạn 26–52s)",
+   "source": "dilim-seed",
+   "ts": 1789197813
+  },
+  {
+   "concept": "niêm mạc ruột",
+   "tokens": [
+    "mac",
+    "niem",
+    "ruot"
+   ],
+   "id": "a52beee63c74",
+   "media_start": 0.0,
+   "weight": 1,
+   "note": "nhung mao ruột cam ấm",
+   "source": "dilim-seed",
+   "ts": 1789197813
+  },
+  {
+   "concept": "lợi khuẩn",
+   "tokens": [
+    "khuan",
+    "loi"
+   ],
+   "id": "ee2d4f0c710d",
+   "media_start": 0.0,
+   "weight": 1,
+   "note": "hệ vi sinh nhiều chủng",
+   "source": "dilim-seed",
+   "ts": 1789197813
+  },
+  {
+   "concept": "men vi sinh",
+   "tokens": [
+    "men",
+    "sinh",
+    "vi"
+   ],
+   "id": "2a3e330f1c41",
+   "media_start": 0.0,
+   "weight": 1,
+   "note": "vi khuẩn que xanh",
+   "source": "dilim-seed",
+   "ts": 1789197813
+  },
+  {
+   "concept": "hại khuẩn tấn công ruột",
+   "tokens": [
+    "cong",
+    "hai",
+    "khuan",
+    "ruot",
+    "tan"
+   ],
+   "id": "4aeeea99691e",
+   "media_start": 88.0,
+   "weight": 1,
+   "note": "thành ruột thủng lỗ (đoạn 88–103s), có logo",
+   "source": "dilim-seed",
+   "ts": 1789197813
+  },
+  {
+   "concept": "gan nhiễm mỡ",
+   "tokens": [
+    "gan",
+    "mo",
+    "nhiem"
+   ],
+   "id": "feac73930ab1",
+   "media_start": 0.0,
+   "weight": 1,
+   "note": "bác sĩ hoạt hình soi gan mỡ",
+   "source": "dilim-seed",
+   "ts": 1789197813
+  },
+  {
+   "concept": "mỡ nội tạng bao quanh gan",
+   "tokens": [
+    "bao",
+    "gan",
+    "mo",
+    "noi",
+    "quanh",
+    "tang"
+   ],
+   "id": "7d26f3877b2e",
+   "media_start": 0.0,
+   "weight": 1,
+   "note": "có chữ tiếng Anh burn sẵn",
+   "source": "dilim-seed",
+   "ts": 1789197813
+  },
+  {
+   "concept": "đại tràng",
+   "tokens": [
+    "dai",
+    "trang"
+   ],
+   "id": "26afc29e52c0",
+   "media_start": 0.0,
+   "weight": 1,
+   "note": "đại tràng sáng đỏ trong cơ thể trong suốt",
+   "source": "dilim-seed",
+   "ts": 1789197813
+  },
+  {
+   "concept": "hệ tiêu hóa",
+   "tokens": [
+    "he",
+    "hoa",
+    "tieu"
+   ],
+   "id": "ee1fb4e428b6",
+   "media_start": 0.0,
+   "weight": 1,
+   "note": "dạ dày-ruột non tách riêng phóng to",
+   "source": "dilim-seed",
+   "ts": 1789197813
+  },
+  {
+   "concept": "đồ chiên dầu mỡ",
+   "tokens": [
+    "chien",
+    "dau",
+    "do",
+    "mo"
+   ],
+   "id": "9daee8a66649",
+   "media_start": 0.0,
+   "weight": 1,
+   "note": "chiên ngập dầu",
+   "source": "dilim-seed",
+   "ts": 1789197813
+  },
+  {
+   "concept": "bia rượu hại gan",
+   "tokens": [
+    "bia",
+    "gan",
+    "hai",
+    "ruou"
+   ],
+   "id": "e9088eb88989",
+   "media_start": 0.0,
+   "weight": 1,
+   "note": "uống bia rồi gan sáng lên",
+   "source": "dilim-seed",
+   "ts": 1789197813
+  },
+  {
+   "concept": "stress công việc",
+   "tokens": [
+    "cong",
+    "stress",
+    "viec"
+   ],
+   "id": "6f9b740e0054",
+   "media_start": 0.0,
+   "weight": 1,
+   "note": "gục đầu xoa thái dương",
+   "source": "dilim-seed",
+   "ts": 1789197813
+  },
+  {
+   "concept": "uống nhiều loại thuốc",
+   "tokens": [
+    "loai",
+    "nhieu",
+    "thuoc",
+    "uong"
+   ],
+   "id": "ec9682caee60",
+   "media_start": 0.0,
+   "weight": 1,
+   "note": "",
+   "source": "dilim-seed",
+   "ts": 1789197813
+  },
+  {
+   "concept": "ăn rau xanh chất xơ",
+   "tokens": [
+    "an",
+    "chat",
+    "rau",
+    "xanh",
+    "xo"
+   ],
+   "id": "c91b3220d32c",
+   "media_start": 0.0,
+   "weight": 1,
+   "note": "",
+   "source": "dilim-seed",
+   "ts": 1789197813
+  },
+  {
+   "concept": "ăn uống lành mạnh vui vẻ",
+   "tokens": [
+    "an",
+    "lanh",
+    "manh",
+    "uong",
+    "ve",
+    "vui"
+   ],
+   "id": "0a15433bfa69",
+   "media_start": 0.0,
+   "weight": 1,
+   "note": "người dùng DiLiM đã chốt",
+   "source": "dilim-seed",
+   "ts": 1789197813
+  },
+  {
+   "concept": "sữa chua",
+   "tokens": [
+    "chua",
+    "sua"
+   ],
+   "id": "fc800e813cb5",
+   "media_start": 0.0,
+   "weight": 1,
+   "note": "xúc sữa chua ăn",
+   "source": "dilim-seed",
+   "ts": 1789197813
+  },
+  {
+   "concept": "uống đủ nước",
+   "tokens": [
+    "du",
+    "nuoc",
+    "uong"
+   ],
+   "id": "b805b304cdcc",
+   "media_start": 0.0,
+   "weight": 1,
+   "note": "",
+   "source": "dilim-seed",
+   "ts": 1789197813
+  },
+  {
+   "concept": "bác sĩ giải thích mô hình gan",
+   "tokens": [
+    "bac",
+    "gan",
+    "giai",
+    "hinh",
+    "mo",
+    "si",
+    "thich"
+   ],
+   "id": "c516411f43a0",
+   "media_start": 0.0,
+   "weight": 1,
+   "note": "",
+   "source": "dilim-seed",
+   "ts": 1789197813
+  },
+  {
+   "concept": "nghệ curcumin",
+   "tokens": [
+    "curcumin",
+    "nghe"
+   ],
+   "id": "d4e54ff06edb",
+   "media_start": 0.0,
+   "weight": 1,
+   "note": "thìa bột nghệ",
+   "source": "dilim-seed",
+   "ts": 1789197813
+  }
+ ]
+}

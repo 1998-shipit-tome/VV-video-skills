@@ -1,0 +1,23 @@
+{
+  "skill_name": "add-footage",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Video Raydel Policosanol mới, transcript có timestamp từng từ ở D:\\HYPERFRAME\\videos\\raydel-v10\\words.json. Đoạn 8.2s–19.6s đọc: \"mỡ máu cao lâu ngày, mảng xơ vữa bám dần vào thành mạch, lòng mạch hẹp lại, máu lên não kém, anh chị hay chóng mặt, hay quên\". Tìm B-roll cho từng ý trong đoạn này, xác minh rồi ghi plan.json. Không render.",
+      "expected_output": "plan.json có 4–5 item (mỡ máu cao / xơ vữa bám thành mạch / lòng mạch hẹp / chóng mặt / hay quên), mỗi item có id từ manifest, start = thời điểm từ kích hoạt trong words.json, media_start chọn theo segments nếu clip dài, verify_frames đã trích. Không có clip nào lặp. 'xơ vữa' và 'lòng mạch hẹp' là anatomy_3d; 'chóng mặt', 'hay quên' là real_person. Gaps ghi rõ nếu có.",
+      "files": ["D:\\HYPERFRAME\\videos\\raydel-v10\\words.json"]
+    },
+    {
+      "id": 2,
+      "prompt": "Tôi vừa bỏ thêm 6 clip mới vào D:\\HYPERFRAME\\footage\\broll\\Ho - Khó Thở. Cập nhật index và mô tả mấy clip mới đó để lần sau tìm được, rồi cho tôi biết clip nào hợp với câu \"ho kéo dài về đêm, ngủ không được\".",
+      "expected_output": "Chạy build_index.py update --sheets (chỉ file mới được probe), describe_batches.py make --folder \"Ho - Khó Thở\", đọc contact sheet từng clip và ghi descriptions jsonl theo schema (scene bắt đầu bằng động từ, subject_type, mood), merge, rồi search 'ho về đêm nằm giường' và trả về ứng viên kèm sheet — mô tả phải phản ánh nội dung ảnh, không chép tên file.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Composition ở D:\\HYPERFRAME\\videos\\rich-q10-v4\\index.html (A-roll dọc 1080x1920, 30fps) đã có caption. Chèn B-roll theo plan.json trong cùng thư mục, bố cục dải trên đỉnh, rồi lint. Video có nhắc Rich Coenzyme Q10 ở giây 41.",
+      "expected_output": "place.py chạy với --layout top, clip copy vào assets/broll/<id>.mp4, snippet chèn vào index.html ở cấp con của #root, wrapper không có data-start, mỗi <video> có muted playsinline data-start data-duration data-media-start; clip sản phẩm tại ~41s lấy từ product_id rich_q10; hyperframes lint pass; báo cáo frame kiểm tra tại từng data-start.",
+      "files": ["D:\\HYPERFRAME\\videos\\rich-q10-v4\\index.html", "D:\\HYPERFRAME\\videos\\rich-q10-v4\\plan.json"]
+    }
+  ]
+}

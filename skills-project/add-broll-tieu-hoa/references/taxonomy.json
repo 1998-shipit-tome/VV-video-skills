@@ -1,0 +1,65 @@
+{
+  "_ghi_chu": "Từ điển phân loại kho B-roll tiêu hóa. Agent dùng id ở đây cho --topic/--kind/--product. Thêm thư mục mới thì thêm vào 'folders'.",
+  "topics": {
+    "trieu_chung":  {"vi": "Triệu chứng người thật: đau bụng, ôm bụng, táo bón/ngồi bồn cầu lâu, đầy hơi, khó chịu sau ăn, đau vùng gan"},
+    "co_che":       {"vi": "Cơ chế đồ họa 3D: dạ dày, ruột, đại tràng, niêm mạc/nhung mao, lợi khuẩn - hại khuẩn, trào ngược, gan nhiễm mỡ, mỡ nội tạng"},
+    "nguyen_nhan":  {"vi": "Nguyên nhân/thói quen xấu: đồ chiên dầu mỡ, fast food, bia rượu, cà phê, thuốc lá, ăn vội/vừa ăn vừa xem điện thoại, ăn khuya, stress công việc, lạm dụng thuốc"},
+    "giai_phap":    {"vi": "Giải pháp/lối sống tốt: rau xanh chất xơ, chuối, khoai lang, yến mạch, sữa chua, uống đủ nước, ăn uống vui vẻ, đi bộ, hít thở, bác sĩ khám/tư vấn, mô hình gan"},
+    "san_pham":     {"vi": "Sản phẩm DiLiM liên quan tiêu hóa: Inulin Fuji FF (chất xơ hòa tan), Nghệ Mùa Thu Okinawa (curcumin, bảo vệ gan/dạ dày), Gan"},
+    "gan":          {"vi": "Chủ đề phụ: gan, gan nhiễm mỡ, xơ gan, mô hình gan"},
+    "tao_bon":      {"vi": "Chủ đề phụ: táo bón, ngồi bồn cầu lâu, giấy vệ sinh"},
+    "loi_khuan":    {"vi": "Chủ đề phụ: hệ vi sinh, lợi khuẩn, hại khuẩn, men vi sinh, kháng sinh"}
+  },
+  "folders": {
+    "01-trieu-chung":  {"pool": "topic",   "topics": ["trieu_chung"]},
+    "02-co-che-3d":    {"pool": "topic",   "topics": ["co_che"]},
+    "03-nguyen-nhan":  {"pool": "topic",   "topics": ["nguyen_nhan"]},
+    "04-giai-phap":    {"pool": "topic",   "topics": ["giai_phap"]},
+    "05-san-pham":     {"pool": "product", "topics": ["san_pham"]},
+    "06-them-moi":     {"pool": "topic",   "topics": []}
+  },
+  "product_folders": {
+    "Inulin Fuji FF":          "inulin_fuji",
+    "Nghệ Mùa Thu Okinawa":    "nghe_okinawa",
+    "Gan":                     "gan"
+  },
+  "subject_types": {
+    "real_person":     "người thật quay thật (kể cả AI-gen chân thực)",
+    "anatomy_3d":      "đồ họa 3D/2D animation giải phẫu: dạ dày, ruột, gan, vi khuẩn",
+    "product":         "hộp/viên/nhãn sản phẩm, nguyên liệu, giấy công bố",
+    "metaphor_object": "vật thể ẩn dụ: ống tắc, rỉ sét, máy lọc...",
+    "lifestyle_scene": "cảnh sinh hoạt không nhân vật rõ: bữa ăn bày sẵn, rau củ, ly nước",
+    "text_graphic":    "chữ/biểu đồ/infographic đã burn sẵn",
+    "screen_ui":       "màn hình điện thoại/máy tính"
+  },
+  "moods": ["positive", "negative", "neutral", "painful", "tense"],
+  "synonyms": {
+    "đau bụng":       ["ôm bụng", "xoa bụng", "ấn bụng", "nhăn mặt", "khom người", "quặn bụng", "co thắt"],
+    "đầy hơi":        ["chướng bụng", "đầy bụng", "khó tiêu", "ợ hơi", "nặng bụng", "xoa bụng sau ăn"],
+    "trào ngược":     ["ợ nóng", "ợ chua", "nóng rát ngực", "axit dạ dày", "thực quản", "tâm vị"],
+    "táo bón":        ["ngồi bồn cầu", "bồn cầu", "toilet", "nhà vệ sinh", "giấy vệ sinh", "rặn", "khó đi ngoài", "đi ngoài"],
+    "tiêu chảy":      ["đi ngoài", "bồn cầu", "chạy vào toilet", "ôm bụng vội"],
+    "dạ dày":         ["bao tử", "viêm loét", "niêm mạc dạ dày", "dịch vị", "axit"],
+    "đại tràng":      ["ruột già", "viêm đại tràng", "polyp", "ống ruột", "khung đại tràng"],
+    "ruột":           ["đường ruột", "ruột non", "nhung mao", "niêm mạc ruột", "thành ruột", "ống tiêu hóa"],
+    "lợi khuẩn":      ["vi khuẩn có lợi", "men vi sinh", "probiotic", "hệ vi sinh", "vi sinh đường ruột"],
+    "hại khuẩn":      ["vi khuẩn gây hại", "vi khuẩn", "độc tố", "hp", "nhiễm khuẩn"],
+    "chất xơ":        ["rau xanh", "rau củ", "chuối", "khoai lang", "yến mạch", "trái cây", "inulin", "prebiotic"],
+    "gan":            ["lá gan", "gan nhiễm mỡ", "xơ gan", "mô hình gan", "hạ sườn phải", "men gan"],
+    "mỡ nội tạng":    ["mỡ bụng", "mỡ bao quanh nội tạng", "khối mỡ vàng"],
+    "đồ chiên":       ["chiên ngập dầu", "dầu mỡ", "gà rán", "fast food", "burger", "pizza", "xúc xích", "đồ nướng", "dầu ăn tái sử dụng"],
+    "bia rượu":       ["uống bia", "rượu", "cụng ly", "nhậu", "say", "whisky"],
+    "cà phê":         ["cafe", "espresso", "phin", "chất kích thích"],
+    "thuốc lá":       ["hút thuốc", "tàn thuốc", "khói thuốc"],
+    "ăn vội":         ["ăn nhanh", "vừa ăn vừa xem điện thoại", "nhai", "cắn miếng lớn", "ăn khuya", "tủ lạnh ban đêm"],
+    "stress":         ["căng thẳng", "kiệt sức", "gục đầu", "xoa thái dương", "áp lực công việc", "làm việc khuya", "ngáp"],
+    "thuốc":          ["viên thuốc", "vỉ thuốc", "lọ thuốc", "kháng sinh", "uống nhiều loại thuốc", "giảm đau"],
+    "uống nước":      ["ly nước", "rót nước", "chai nước", "nước detox", "nước chanh", "hạt chia", "2 lít nước"],
+    "sữa chua":       ["yogurt", "men sống", "probiotic"],
+    "ăn lành mạnh":   ["salad", "rau", "trái cây", "ăn vui vẻ", "healthy", "cá hấp", "súp"],
+    "bác sĩ":         ["khám", "tư vấn", "ống nghe", "phòng khám", "mô hình nội tạng", "bệnh nhân"],
+    "vận động":       ["đi bộ", "chạy bộ", "hít thở", "thư giãn", "tập thể dục"],
+    "nghệ":           ["curcumin", "bột nghệ", "củ nghệ", "kháng viêm"],
+    "thần kinh phế vị": ["trục não ruột", "não ruột", "vagus"]
+  }
+}

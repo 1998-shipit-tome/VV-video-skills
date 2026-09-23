@@ -1,0 +1,5 @@
+{
+  "_huong_dan": "Đường dẫn tương đối tính từ thư mục skill này. Muốn để kho clip chỗ khác (ổ D, NAS...) thì đổi broll_root thành đường dẫn tuyệt đối, rồi chạy: python scripts/build_index.py update",
+  "broll_root": "footage",
+  "index_dir": "index"
+}
